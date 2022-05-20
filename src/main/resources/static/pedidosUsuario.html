@@ -1,0 +1,134 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body class="text-center">
+
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="data:image/png;base64,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" alt="" width="72" height="57">
+        <h2>Por favor, ponga el número de pédido que quiere comprobar</h2>
+        <p class="lead">Inserte el número de pedido para ver la información de envio. Recuerde que el numero de pedido es único</p>
+    </div>
+
+    <center>
+    <div class="col-5">
+        <label for="numeroPedido" class="form-label">Id Pedido</label>
+        <div class="input-group has-validation">
+          <input type="text" class="form-control" id="numeroPedido" placeholder="" required></br>
+        </div>
+      </div>
+
+      <hr class="my-4">
+        <button onclick="cogerDatos()" class="w-100 btn btn-primary btn-lg" type="submit">Comprobar</button>
+      
+    </center>
+
+    </hr>
+    <br>
+    <br>
+
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="row g-10">
+                <div class="col-md-5 col-lg-4 order-md-last">
+                  <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-primary">Información   </span>
+                  </h4>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                      <div>
+                        <h6 class="my-0">Username</h6>
+                      </div>
+                      <span id = "username" class="text-muted"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                      <div>
+                        <h6 class="my-0">Email</h6>
+                      </div>
+                      <span id = "email" class="text-muted"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                      <div>
+                        <h6 class="my-0">Country</h6>
+                      </div>
+                      <span class="text-muted" id="country"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                          <h6 class="my-0">Address</h6>
+                        </div>
+                        <span class="text-muted" id="address"></span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                          <h6 class="my-0">Nombre cliente</h6>
+                        </div>
+                        <span class="text-muted" id="pedidoName"></span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                          <h6 class="my-0">Food Id</h6>
+                        </div>
+                        <span class="text-muted" id="foodId"></span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                          <h6 class="my-0">Precio</h6>
+                        </div>
+                        <span class="text-muted" id="pricePedido"></span>
+                      </li>
+          </div>
+          <div class="col">
+            <img src="https://recursos.marketingnews.es/files/633/20.jpg" width="300" height="300">
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+    </hr>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 1955-2022 McDonalds</p>
+        <ul class="list-inline">
+        </ul>
+      </footer>
+    
+  </body>
+
+  
+
+    <script>
+       
+        
+       const cogerDatos = async () => {
+            var valor = document.getElementById("numeroPedido").value;
+            url="/api/v1/pedidosUsers/" + valor;
+            let request = await fetch(url);
+            if (request.status === 200) {
+                let data = await request.json();
+                document.getElementById("username").innerHTML = JSON.stringify(data[0]["username"]); 
+                document.getElementById("email").innerHTML = JSON.stringify(data[0]["email"]); 
+                document.getElementById("country").innerHTML = JSON.stringify(data[0]["country"]);
+                document.getElementById("address").innerHTML = JSON.stringify(data[0]["address"]);
+                document.getElementById("pedidoName").innerHTML = JSON.stringify(data[0]["pedidoName"]);
+                document.getElementById("foodId").innerHTML = JSON.stringify(data[0]["foodId"]);
+                document.getElementById("pricePedido").innerHTML = JSON.stringify(data[0]["pricePedido"]);
+                    
+            }
+                
+	            
+        }
+
+    
+
+        
+
+    </script>
+</html>
