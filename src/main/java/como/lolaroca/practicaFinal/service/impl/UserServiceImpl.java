@@ -92,6 +92,25 @@ public class UserServiceImpl implements UserService{
         return userPagarJoins; //me devuelve mi nueva tabla. 
     }
 
+    @Override
+    public String creaUsuario(UserModel usuario) {
+        Long userId1 = usuario.getUserId();
+        boolean usuarioExists = repository.existsById(userId1);
+        if(usuarioExists){
+            return "User Already Exists.";
+        }else{
+            Long userId = usuario.getUserId();
+            String username = usuario.getUsername();
+            String email = usuario.getEmail();
+            String country = usuario.getCountry();
+            String address = usuario.getAddress();
+            Long pedidoId = usuario.getPedidoId();
+            String password = usuario.getPassword();
+            repository.creaUsuario(userId,username,email,country,address,pedidoId,password);
+            return "OK";
+        }
+    }
+
 
     
 }

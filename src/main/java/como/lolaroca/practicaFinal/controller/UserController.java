@@ -2,8 +2,10 @@ package como.lolaroca.practicaFinal.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,6 +49,22 @@ public class UserController {
     @GetMapping("/usersPagar/{id}") //nos devuelve la información de los usuarios
     public ResponseEntity<Iterable<UserPagarJoin>> retrieveUserPagar(@PathVariable String id) {
         return ResponseEntity.ok().body(service.retrieveUserPagar(id));
+    }
+
+    @PostMapping("/signup")
+    public ResponseEntity<String> creaUsuario(
+        @RequestBody UserModel usuario,
+        BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return new ResponseEntity<String>("{\"result\" : \"KO\"}", HttpStatus.BAD_REQUEST);
+        }else{
+            String comparar = service.creaUsuario(usuario);
+            if(comparar == "OK"){
+                return new ResponseEntity<String>("{\"result\" : \"OK\"}", HttpStatus.OK);
+            }else{
+                return null;
+            }
+        }
     }
 
 
