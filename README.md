@@ -3,3 +3,5 @@ En nuestra página final de pedidos de Mc Donalds, llamada “index.html”, hay
 En segundo lugar, hay otra pagina que te ayuda a ver los descuentos disponibles para cada cliente. Al meter el id del usuario y te ensena todos los descuentos disponibles para ese usuario. Tercero, podemos ver la producción del elemento. Es decir, al meter el id del elemento de comida puedes ver todos los pedidos que incluyen ese elemento para realizar los envíos con mas facilidad. 
 Además, en el link llamado “Pagar” puedes poner el id del usuario y obtener toda la información de su cuenta bancaria. Incluyendo el numero de tarjeta, el nombre y el precio del pedido para ver cuanto debes. 
 Para terminar, hay una opción de hacerse cliente, en la que incluye un formulario que guarda el usuario con toda su información en nuestra base de datos. También, incluimos un link que te ensena un mapa de la ciudad para ver donde nos puedes encontrar.
+
+Tenemos dos usuarios. En todas las páginas webs hay que insertar solo 0 o 1 que son los ids válidos
